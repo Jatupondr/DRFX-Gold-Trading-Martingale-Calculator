@@ -12,43 +12,63 @@
             box-sizing: border-box;
         }
 
+        /* เพิ่ม !important เพื่อบังคับใช้สีพื้นหลัง */
+        html {
+            background-color: #1a1a1a !important;
+            min-height: 100vh;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #1a1a1a;
-            color: #fff;
+            background-color: #1a1a1a !important;
+            color: #fff !important;
             padding: 20px;
             min-height: 100vh;
+            /* เพิ่มเพื่อให้แน่ใจว่าพื้นหลังครอบคลุมทั้งหน้า */
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        /* เพิ่ม wrapper เพื่อให้แน่ใจว่าพื้นหลังแสดงถูกต้อง */
+        .wrapper {
+            background-color: #1a1a1a;
+            min-height: 100vh;
+            padding: 20px 0;
         }
         
         .container {
-            background-color: #2a2a2a;
+            background-color: #2a2a2a !important;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0,0,0,0.5);
             max-width: 1200px;
             margin: 0 auto;
+            /* เพิ่มเพื่อให้แน่ใจว่าสีพื้นหลังแสดง */
+            position: relative;
+            z-index: 1;
         }
         
         h1 {
             text-align: center;
-            color: #ffd700;
+            color: #ffd700 !important;
             margin-bottom: 10px;
         }
         
         .credit {
             text-align: center;
             margin-bottom: 30px;
+            color: #fff !important;
         }
         
         .credit a {
-            color: #4267B2;
+            color: #4267B2 !important;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
         }
         
         .credit a:hover {
-            color: #5a7bc2;
+            color: #5a7bc2 !important;
         }
         
         .input-group {
@@ -58,7 +78,7 @@
         label {
             display: block;
             margin-bottom: 5px;
-            color: #ffd700;
+            color: #ffd700 !important;
             font-weight: 500;
         }
         
@@ -67,8 +87,8 @@
             padding: 12px;
             border: 1px solid #444;
             border-radius: 5px;
-            background-color: #333;
-            color: #fff;
+            background-color: #333 !important;
+            color: #fff !important;
             font-size: 16px;
             transition: border-color 0.3s ease;
         }
@@ -81,8 +101,8 @@
         button {
             width: 100%;
             padding: 15px;
-            background-color: #ffd700;
-            color: #000;
+            background-color: #ffd700 !important;
+            color: #000 !important;
             border: none;
             border-radius: 5px;
             font-size: 18px;
@@ -93,7 +113,7 @@
         }
         
         button:hover {
-            background-color: #ffed4e;
+            background-color: #ffed4e !important;
         }
         
         button:active {
@@ -116,18 +136,20 @@
             margin-top: 20px;
             overflow-x: auto;
             display: block;
+            background-color: #2a2a2a !important;
         }
         
         th, td {
-            border: 1px solid #444;
+            border: 1px solid #444 !important;
             padding: 12px;
             text-align: center;
             white-space: nowrap;
+            color: #fff !important;
         }
         
         th {
-            background-color: #ffd700;
-            color: #000;
+            background-color: #ffd700 !important;
+            color: #000 !important;
             font-weight: bold;
             position: sticky;
             top: 0;
@@ -135,48 +157,62 @@
         }
         
         tr {
-            background-color: #1e3a5f; /* สีกรมเข้ม */
+            background-color: #1e3a5f !important; /* สีกรมเข้ม */
         }
         
         tr:nth-child(even) {
-            background-color: #2c4a6d; /* สีกรมอ่อนกว่าสำหรับแถวคู่ */
+            background-color: #2c4a6d !important; /* สีกรมอ่อนกว่าสำหรับแถวคู่ */
         }
         
         tr:hover {
-            background-color: #3a5a8a; /* สีกรมอ่อนเมื่อ hover */
+            background-color: #3a5a8a !important; /* สีกรมอ่อนเมื่อ hover */
+        }
+        
+        /* สีแดงเข้มสำหรับแถวที่เกิน DD - ใช้ class แทน inline style */
+        .over-dd-limit {
+            background-color: #8b0000 !important;
+        }
+        
+        .over-dd-limit:hover {
+            background-color: #a00000 !important;
         }
         
         .summary {
-            background-color: #333;
+            background-color: #333 !important;
             padding: 25px;
             border-radius: 8px;
             margin-top: 20px;
             border: 1px solid #444;
+            color: #fff !important;
         }
         
         .summary h3 {
-            color: #ffd700;
+            color: #ffd700 !important;
             margin-bottom: 15px;
         }
         
         .summary h4 {
-            color: #ffd700;
+            color: #ffd700 !important;
             margin-top: 20px;
             margin-bottom: 10px;
         }
         
+        .summary p, .summary li {
+            color: #fff !important;
+        }
+        
         .warning {
-            color: #ff6b6b;
+            color: #ff6b6b !important;
             font-weight: bold;
         }
         
         .success {
-            color: #4ecdc4;
+            color: #4ecdc4 !important;
             font-weight: bold;
         }
         
         .info {
-            color: #ffd93d;
+            color: #ffd93d !important;
             font-weight: bold;
         }
         
@@ -244,69 +280,84 @@
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
+
+        /* Dark mode support - กันการถูก override จาก user agent stylesheet */
+        @media (prefers-color-scheme: light) {
+            html, body {
+                background-color: #1a1a1a !important;
+                color: #fff !important;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🥇 Gold Trading Martingale Calculator</h1>
-        <p class="credit">
-            <a href="https://www.facebook.com/DRFXBotBuilders" target="_blank" rel="noopener noreferrer">
-                📘 DR FX BOT BUILDERS 📘
-            </a>
-        </p>
-        
-        <form id="calculatorForm">
-            <div class="grid">
-                <div class="input-group">
-                    <label for="balance">ต้นทุน (Balance) $:</label>
-                    <input type="number" id="balance" value="1000" step="100" min="100" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="initialLot">Lot เริ่มต้น:</label>
-                    <input type="number" id="initialLot" value="0.01" step="0.01" min="0.01" max="10" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="multiplier">Lot Martingale (ตัวคูณ):</label>
-                    <input type="number" id="multiplier" value="1.2" step="0.1" min="1" max="10" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="distance">ระยะเปิดไม้ (Point):</label>
-                    <input type="number" id="distance" value="400" step="10" min="50" max="2000" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="maxDD">DD% สูงสุดที่รับได้:</label>
-                    <input type="number" id="maxDD" value="30" step="5" min="5" max="100" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="targetProfit1">เป้าหมายกำไรที่ 1 (%):</label>
-                    <input type="number" id="targetProfit1" value="10" step="1" min="1" max="100" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="targetProfit2">เป้าหมายกำไรที่ 2 (%):</label>
-                    <input type="number" id="targetProfit2" value="20" step="1" min="1" max="200" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="targetProfit3">เป้าหมายกำไรที่ 3 (%):</label>
-                    <input type="number" id="targetProfit3" value="30" step="1" min="1" max="300" required>
-                </div>
-                
-
-            </div>
+    <div class="wrapper">
+        <div class="container">
+            <h1>🥇 Gold Trading Martingale Calculator</h1>
+            <p class="credit">
+                <a href="https://www.facebook.com/DRFXBotBuilders" target="_blank" rel="noopener noreferrer">
+                    📘 DR FX BOT BUILDERS 📘
+                </a>
+            </p>
             
-            <button type="submit">คำนวณ</button>
-        </form>
-        
-        <div class="results" id="results"></div>
+            <form id="calculatorForm">
+                <div class="grid">
+                    <div class="input-group">
+                        <label for="balance">ต้นทุน (Balance) $:</label>
+                        <input type="number" id="balance" value="1000" step="100" min="100" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="initialLot">Lot เริ่มต้น:</label>
+                        <input type="number" id="initialLot" value="0.01" step="0.01" min="0.01" max="10" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="multiplier">Lot Martingale (ตัวคูณ):</label>
+                        <input type="number" id="multiplier" value="1.2" step="0.1" min="1" max="10" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="distance">ระยะเปิดไม้ (Point):</label>
+                        <input type="number" id="distance" value="400" step="10" min="50" max="2000" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="maxDD">DD% สูงสุดที่รับได้:</label>
+                        <input type="number" id="maxDD" value="30" step="5" min="5" max="100" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="targetProfit1">เป้าหมายกำไรที่ 1 (%):</label>
+                        <input type="number" id="targetProfit1" value="10" step="1" min="1" max="100" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="targetProfit2">เป้าหมายกำไรที่ 2 (%):</label>
+                        <input type="number" id="targetProfit2" value="20" step="1" min="1" max="200" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="targetProfit3">เป้าหมายกำไรที่ 3 (%):</label>
+                        <input type="number" id="targetProfit3" value="30" step="1" min="1" max="300" required>
+                    </div>
+                </div>
+                
+                <button type="submit">คำนวณ</button>
+            </form>
+            
+            <div class="results" id="results"></div>
+        </div>
     </div>
 
     <script>
+        // Force dark background on load
+        document.addEventListener('DOMContentLoaded', function() {
+            // ป้องกัน flash of white background
+            document.documentElement.style.backgroundColor = '#1a1a1a';
+            document.body.style.backgroundColor = '#1a1a1a';
+        });
+
         // Prevent form submission and calculate
         document.getElementById('calculatorForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -330,7 +381,7 @@
                 return;
             }
             
-            let html = '<h2>ผลการคำนวณ</h2>';
+            let html = '<h2 style="color: #ffd700;">ผลการคำนวณ</h2>';
             html += '<div style="overflow-x: auto;">';
             html += '<table>';
             html += '<thead>';
@@ -422,11 +473,8 @@
             
             // Build table rows
             tableRows.forEach(row => {
-                let rowStyle = '';
-                if (row.overLimit) {
-                    rowStyle = 'style="background-color: #8b0000;"'; // สีแดงเข้มสำหรับแถวที่เกิน DD
-                }
-                html += '<tr ' + rowStyle + '>';
+                let rowClass = row.overLimit ? 'class="over-dd-limit"' : '';
+                html += '<tr ' + rowClass + '>';
                 html += '<td>' + row.order + '</td>';
                 html += '<td>' + row.lot + '</td>';
                 html += '<td>' + row.totalDistance + '</td>';
@@ -469,7 +517,7 @@
             html += '<hr>';
             html += '<h4>🎯 เป้าหมาย Take Profit แนะนำ:</h4>';
             html += '<p class="info">คำนวณจาก DD% สูงสุดที่รับได้ (' + maxDD + '%) และ Lot รวมทั้งหมด ' + maxOrders + ' ไม้</p>';
-            html += '<p>• <strong>จุดคุ้มทุน (Point)</strong> = ระยะที่ราคาต้อง<strong>ย้อนกลับ</strong>จากจุดที่โดนลาก เพื่อให้ได้กำไรรวม = 0</p>';
+            html += '<p>• <strong>จุดคุ้มทุน (Point)</strong> = ระยะที่ราคาต้อง<strong>ย้อนกลับ</strong>จากไม้สุดท้ายที่โดนลาก เพื่อให้ได้กำไรรวม = 0</p>';
             html += '<p>• คืนทุน: <span class="info">' + tpToBreakeven + ' pips</span> (กำไร = $0)</p>';
             html += '<p>• กำไร ' + targetProfit1 + '%: <span class="success">' + tpForProfit1 + ' pips</span> (กำไร = $' + (balance * (targetProfit1 / 100)).toFixed(2) + ')</p>';
             html += '<p>• กำไร ' + targetProfit2 + '%: <span class="success">' + tpForProfit2 + ' pips</span> (กำไร = $' + (balance * (targetProfit2 / 100)).toFixed(2) + ')</p>';
